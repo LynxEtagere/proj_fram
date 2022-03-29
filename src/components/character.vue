@@ -1,8 +1,6 @@
 <template>
 
-<Characters v-for="character in characters" 
-    :key="character.id" 
-    :name="character.name" />
+
 
 
 
