@@ -1,8 +1,12 @@
 <template>
 
-
-
-
+<Character
+            class="character"
+            v-for="character in characters.results"
+            :key="character.id"
+            :name="character.name"
+            :character="character"
+/>
 
 </template>
 
@@ -10,6 +14,7 @@
 
 import { defineComponent } from "vue";
 import Characters from "./characters.vue";
+
 
 export default defineComponent({
     props: {
