@@ -3,6 +3,7 @@ import {createStore} from "vuex";
 const store = createStore({
     state: {
         characters:[],
+        search:'',
     },
     getters:{
         getChar:(state)=>state.characters   

@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       characters: [],
-      search: "",
+      // search: "",
     };
   },
 
@@ -19,11 +19,11 @@ export default {
   //la fonction dans le mounted est l'appel D'api qui permet de récuperer les données désirées dans ce cas là,
   //toutes les données sur les Servants
   computed: {
-    filteredcharacters() {
-      return this.characters?.filter((character) =>
-        character?.name.toLowerCase().includes(this.search)
-      );
-    },
+    // filteredcharacters() {
+    //   return this.characters?.filter((character) =>
+    //     character?.name.toLowerCase().includes(this.search)
+    //   );
+    // },
     characters(){
       console.log(this.$store.getters.getChar)
       return this.$store.getters.getChar
@@ -33,11 +33,12 @@ export default {
 };
 </script>
 <template>
-  <input
+<!-- La fonction recherche ne fonctionne plus de puis l'implémentation du store -->
+  <!-- <input
     text="text"
     v-model="search"
     placeholder="Chercher un perso (en minuscules)"
-  />
+  /> -->
   <div v-if="search">
     <Characters
       v-for="character in filteredcharacters"
