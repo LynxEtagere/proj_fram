@@ -1,5 +1,4 @@
 import {createStore} from "vuex";
-import axios from "axios";
 
 const store = createStore({
     state: {
@@ -11,8 +10,8 @@ const store = createStore({
     actions:{
     },
     mutations:{
-        SET_CHAR(state,characters){
-            state.characters = characters;
+        addChar(state,characters){
+
         }
     },
 
