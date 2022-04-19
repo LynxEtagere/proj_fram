@@ -32,7 +32,7 @@ export default {
       });
   },  
 
-  //la fonction dans le mounted est l'appel D'api qui permet de récuperer les données désirées dans ce cas là, 4
+  //la fonction dans le mounted est l'appel D'api qui permet de récuperer les données désirées dans ce cas là,
   //toutes les données sur les Servants
   computed: {
     filteredcharacters() {

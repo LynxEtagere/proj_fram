@@ -16,6 +16,7 @@
         @play="your_method"
         src="../assets/fgo.mp4"
         ></vue3-video-player>
+        <!-- Il est absolument possible que la vidéo ne se lance pas / Je pense corriger ce pb dans le futur -->
     </div>
 </template>
 
