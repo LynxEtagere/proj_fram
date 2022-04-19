@@ -12,25 +12,9 @@ export default {
     return {
       characters: [],
       search: "",
-      // "https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&type=normal&className=saber&attribute=human&lang=en"
-      //https://api.atlasacademy.io/basic/NA/servant/search?lang=en&excludeCollectionNo=0&type=normal
-      //https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&type=normal&className=saber&lang=en%22%20\
-      //https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&rarity=4&rarity=5&rarity=3&className=saber&lang=en
-      //https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&type=normal&className=saber&lang=en
     };
   },
-  mounted() {
-    axios
-      .get(
-        "https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&type=normal&className=saber&lang=en",
-        
-      )
-      .then((servants) => {
-        // this.characters.push(servants.data)
-        this.characters = servants.data;
-        console.log(servants.data);
-      });
-  },  
+
 
   //la fonction dans le mounted est l'appel D'api qui permet de récuperer les données désirées dans ce cas là,
   //toutes les données sur les Servants
@@ -40,6 +24,10 @@ export default {
         character?.name.toLowerCase().includes(this.search)
       );
     },
+    characters(){
+      console.log(this.$store.getters.getChar)
+      return this.$store.getters.getChar
+    }
   },
   //la fonction dans le computed permet de créer une barre de recherche aui retourne un servant qui correspond à la recherche
 };

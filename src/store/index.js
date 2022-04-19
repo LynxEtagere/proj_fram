@@ -7,11 +7,9 @@ const store = createStore({
     getters:{
         getChar:(state)=>state.characters   
     },
-    actions:{
-    },
     mutations:{
-        addChar(state,characters){
-
+        addChar(state, item){
+            state.characters = item;
         }
     },
 

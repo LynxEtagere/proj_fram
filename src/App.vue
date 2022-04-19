@@ -2,10 +2,39 @@
 import { defineComponent } from "@vue/runtime-core";
 // // import HelloWorld from './components/HelloWorld.vue'
 // import Characters from './components/HelloWorld.vue'
-// import axios from 'axios'
-import store from "./store";
+import axios from 'axios'
 
-export default defineComponent({});
+export default ({
+  // components: {
+  //   // Header,
+  //   // Characters,
+  // },
+  data() {
+    return {
+    };
+  },
+  mounted() {
+    axios
+      .get(
+        "https://api.atlasacademy.io/nice/NA/servant/search?excludeCollectionNo=0&type=normal&className=saber&lang=en",
+        
+      )
+      .then((servants) => {
+        this.$store.commit('addChar',servants.data)
+
+      });
+  },  
+
+  //la fonction dans le mounted est l'appel D'api qui permet de récuperer les données désirées dans ce cas là,
+  //toutes les données sur les Servants
+  computed: {
+    filteredcharacters() {
+      return this.characters?.filter((character) =>
+        character?.name.toLowerCase().includes(this.search)
+      );
+    },
+  },
+});
 </script>
 <template>
   <img class="center" alt="Vue logo" src="./assets/fgo.png" />

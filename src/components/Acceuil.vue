@@ -11,12 +11,10 @@
       fournies par le jeu
     </p>
   </div>
-    <div class="player-container">
-        <vue3-video-player
-        @play="your_method"
-        src="../assets/fgo.mp4"
-        ></vue3-video-player>
-        <!-- Il est absolument possible que la vidéo ne se lance pas / Je pense corriger ce pb dans le futur -->
+    <div class="video">
+          <video height="1080" width="720" autoplay muted loop>
+            <source src="../assets/fgo.mp4" type="video/mp4">
+          </video>
     </div>
 </template>
 
@@ -32,5 +30,8 @@ export default {
 <style>
 .banner {
   background-color: lightgoldenrodyellow;
+}
+.video{
+  margin:10%;
 }
 </style>
