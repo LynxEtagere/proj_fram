@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+Projet Grand Order :
+Afin de lancer le projet, il faut lancer la commande npm i pour installer les dépendences du projet. Une fois les dépendences installées , afin de lancer le serveur il faut entrer la commande npm run dev.
+Une fois le serveur lancé, s'il n'y a aucun problèmes,  l'utilisateur sera redirigé sur la page d'acceuil du site, et il pourra ensuite accéder à la fonctionnalité
+principale du site : La liste des Servants(personnages) tirés du jeu mobile Fate Grand Order, comme un Pokédex. La liste est composée de 34 personnages, et l'on peut
+accéder à une fiche plus détaillée en cliquant sur son nom. Une fois sur la fiche, on aura accès à des statistiques telles que le nom, l'attaque maximum, les points de
+vie maximum, le noble phantasm(attaque Ultime) et visualiser différents états du personnage choisi.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Les dépendences utilisées sont :
+  -Vue 3 Video player
+  - Les fonctions store et router
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+D'autres dépendences peuvent être trouvées dans le fichier package.json mais elles ne sont pas utilisées. 
