@@ -10,4 +10,8 @@ Les dépendences utilisées sont :
   - Les fonctions store et router
 
 D'autres dépendences peuvent être trouvées dans le fichier package.json mais elles ne sont pas utilisées. 
+<<<<<<< HEAD
  Maj du 24 juin
+=======
+Il faut regarder la branche Master
+>>>>>>> 8fd79ce45fc412d9c7882d8f615ec28dc67852ae
